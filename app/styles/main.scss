@@ -3,7 +3,9 @@
 @import "neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
-$mobile: new-breakpoint(max-width 640px 4);
+@import "variables";
+
+$mobile: new-breakpoint(max-width 767px 4);
 $tablet: new-breakpoint(max-width 760px 8);
 
 body {
@@ -11,22 +13,26 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   margin: 0;
+  line-height: 24px;
+  /* background-image: url("/images/bg-pictures.png"); */
 }
 
 .welcome-section {
-  background-image: url("/images/welcome-bg.jpg");
-  background-size: cover;
+  background-image: url("/images/bg-pictures.png");
+  /* background-size: contain; */
   background-position: center;
   position: relative;
   /* width: 100%; */
   height: 100vh;
-  min-height: 748px;
+  /* min-height: 748px; */
   overflow: hidden;
 
   video {
     @include span-columns(12);
     position: absolute;
-    top: -30vh;
+    /* top: -30vh; */
+    height: 100vh;
+    width: 100%;
   }
 }
 
@@ -36,9 +42,30 @@ body {
     @include outer-container;
     height: auto;
     position: relative;
-    padding: 100px 0;
+    padding: 0 0 100px;
     @include media ($mobile) {
       padding-bottom: 50px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: $lato;
+      text-transform: uppercase;
+      color: $dark-gray;
+      margin: 50px;
+      position: relative;
+
+      &:after {
+        content: '';
+        height: 3px;
+        width: 100px;
+        display: block;
+        background: $gray;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -50px;
+      }
     }
 
     .avatar {
@@ -54,10 +81,13 @@ body {
 
     .name {
       text-align: center;
-      font-family: 'Dancing Script', cursive;
-      font-weight: 300;
-      margin: 0;
-      font-size: 45px;
+      font-family: $montserrat;
+      font-weight: 400;
+      margin-bottom: 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $dark-gray;
     }
 
     .dob {
@@ -66,7 +96,7 @@ body {
       font-weight: 300;
       font-style: italic;
       font-size: 12px;
-      color: #aaa;
+      color: $gray;
     }
 
     .bride {
@@ -93,8 +123,9 @@ body {
       @include span-columns(10);
       @include shift(1);
       text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
+      font-family: $lato;
+      color: $dark-gray;
+      font-size: 15px;
       @include media ($mobile) {
         margin-bottom: 50px;
       }
