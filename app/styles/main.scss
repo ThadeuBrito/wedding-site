@@ -18,28 +18,63 @@ body {
   /* background-image: url("/images/bg-pictures.png"); */
 }
 
+.omega {
+  /* @include omega(); */
+  margin-right: 0 !important;
+}
+
 .welcome-section {
-  background-image: url("/images/bg-pictures.png");
-  /* background-size: contain; */
+  background-color: #323232;
   background-position: center;
   position: relative;
-  /* width: 100%; */
   height: 100vh;
-  /* min-height: 748px; */
   overflow: hidden;
-  opacity: 0.2;
+  opacity: 0.9;
+  @include media($mobile) {
+    background-image: url("/images/bg-pictures.png");
+    opacity: 0.9;
+  }
 
   video {
-    @include span-columns(12);
-    position: absolute;
-    top: -30vh;
-    vertical-align: middle;
-    /* height: 100vh; */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    @include media ($mobile) {
-      top: 50vh;
+    height: 100%;
+    opacity: 0.5;
+  }
+  @media (min-aspect-ratio: 16/9) {
+    video {
+      height: 400%;
+      top: -150%;
     }
   }
+  @media (max-aspect-ratio: 16/9) {
+    video {
+      height: 400%;
+      top: -150%;
+    }
+  }
+  @include media($mobile) {
+    video {
+      display: none;
+    }
+  }
+
+  .monogram-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -297.5px;
+    margin-top: -278px;
+    @include media($mobile) {
+      width: 80%;
+      margin: 10%;
+      left: 0;
+      top: 0;
+    }
+  }
+
 }
 
 .about-both {
@@ -188,10 +223,6 @@ body {
         margin-left: -50px;
       }
     }
-
-    .omega {
-      @include omega();
-    }
     .box-time {
       @include span-columns(2);
       box-sizing:border-box;
@@ -203,6 +234,10 @@ body {
       text-align: center;
       font-family: $montserrat;
       padding: 50px 0px;
+      @include media($mobile) {
+        font-size: 30px;
+        border: 5px solid white;
+      }
     }
 
     .icon {
@@ -215,6 +250,7 @@ body {
 .about-event {
 
   background-color: white;
+  border-bottom: 1px solid $cloud;
   .content {
     @include outer-container;
     position: relative;
@@ -242,6 +278,168 @@ body {
         bottom: -20px;
         left: 50%;
         margin-left: -50px;
+      }
+    }
+
+  }
+}
+
+.where-we-go {
+
+  background-color: white;
+  .content {
+    @include outer-container;
+    position: relative;
+    /* padding: 100px 50px 200px; */
+    padding: 50px;
+    margin-top: 0;
+    text-align: center;
+    height: 100vh;
+    @include media ($mobile) {
+      padding-bottom: 50px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: $lato;
+      text-transform: uppercase;
+      color: $dark-gray;
+      margin: 0 50px 50px;
+      position: relative;
+      margin-bottom: 20vh;
+
+      &:after {
+        content: '';
+        height: 3px;
+        width: 100px;
+        display: block;
+        background: $gray;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+
+    .icon {
+      color: $dark-gray;
+      font-size: 250px;
+    }
+
+    .question {
+      color: $dark-gray;
+      font-family: $lato;
+      line-height: 1em;
+    }
+
+  }
+}
+
+
+.to-cancun {
+
+  background: url("/images/bg-cancun-1.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  /* height: 400px; */
+  height: 100vh;
+  .content {
+    @include outer-container;
+    position: relative;
+    padding: 50px;
+    margin-top: 0;
+    text-align: center;
+    @include media ($mobile) {
+      padding-bottom: 50px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: $lato;
+      text-transform: uppercase;
+      color: white;
+      margin: 100px 0px 50px;
+      font-size: 80px;
+      position: relative;
+      @include media($mobile) {
+        font-size: 50px;
+        line-height: 1em;
+      }
+
+      &:after {
+        content: '';
+        height: 3px;
+        width: 60%;
+        display: block;
+        background: white;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        margin-left: -30%;
+      }
+    }
+  }
+}
+
+
+.want-to-do {
+
+  background-color: white;
+  .content {
+    @include outer-container;
+    position: relative;
+    /* padding: 100px 50px 200px; */
+    padding: 50px;
+    margin-top: 0;
+    text-align: center;
+    /* height: 100vh; */
+    @include media ($mobile) {
+      padding-bottom: 50px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: $lato;
+      text-transform: uppercase;
+      color: $dark-gray;
+      margin: 0 50px 50px;
+      position: relative;
+      margin-bottom: 20vh;
+
+      &:after {
+        content: '';
+        height: 3px;
+        width: 100px;
+        display: block;
+        background: $gray;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+
+    .box-info {
+      @include span-columns(6);
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+      }
+      .title-info {
+        text-align: left;
+        font-family: $montserrat;
+        font-weight: 400;
+        margin: 0 10px 15px;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $dark-gray;
+      }
+      .description {
+        text-align: left;
+        font-family: $lato;
+        color: $dark-gray;
+        font-size: 15px;
+        margin: 0 10px 15px;
       }
     }
 
