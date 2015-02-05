@@ -649,7 +649,7 @@ body {
   }
 }
 
-.map-section {
+.where {
 
   background-color: white;
   .content {
@@ -669,9 +669,9 @@ body {
       font-family: $lato;
       text-transform: uppercase;
       color: $dark-gray;
-      margin: 0 50px 50px;
+      margin: 0 50px 0px;
       position: relative;
-      margin-bottom: 80px;
+      margin-bottom: 0px;
       @include media($mobile) {
         line-height: 1em;
       }
@@ -688,6 +688,19 @@ body {
         margin-left: -50px;
       }
     }
-
   }
+}
+
+
+
+
+
+.map-section {
+
+  background-color: white;
+
+  #map-canvas {
+    height: 60vh;
+  }
+
 }
