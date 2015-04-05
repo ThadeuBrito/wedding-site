@@ -1,11 +1,14 @@
+'use strict';
+
 console.log('\'Allo \'Allo!');
 
-$('.months').countdown('2015/07/04', function(event) {
-  $(this).html(event.strftime('%m'));
-});
+// $('.months').countdown('2015/7/4', function(event) {
+//   $(this).html(event.strftime('%m'));
+//   $('.count-down > .content > .title').html(event.strftime('%m meses %D days %H:%M:%S'));
+// });
 
 $('.days').countdown('2015/07/04', function(event) {
-  $(this).html(event.strftime('%d'));
+  $(this).html(event.strftime('%D'));
 });
 
 $('.hours').countdown('2015/07/04', function(event) {
@@ -27,7 +30,7 @@ function initialize() {
     zoom: 15,
     scrollwheel: false,
     center: myLatlng
-  }
+  };
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var marker = new google.maps.Marker({

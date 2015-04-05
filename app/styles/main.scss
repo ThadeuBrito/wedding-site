@@ -29,6 +29,23 @@ body {
   margin-right: 0 !important;
 }
 
+.custom-border-top {
+  background-image: url("/images/border-top.png");
+  margin-top: -5px;
+  height: 7px;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+}
+
+.custom-border-bottom {
+  background-image: url("/images/border-bottom.png");
+  height: 7px;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+}
+
 .welcome-section {
   background-color: #323232;
   background-position: center;
@@ -36,6 +53,7 @@ body {
   height: 100vh;
   overflow: hidden;
   opacity: 0.9;
+  /* z-index: -1; */
   @include media($mobile) {
     background-image: url("/images/bg-pictures.png");
     opacity: 0.9;
@@ -202,8 +220,8 @@ body {
   background: url("/images/welcome-bg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
-  border-top: 5px dotted #fff;
-  border-bottom: 5px dotted #fff;
+  /* border-top: 5px dotted #fff; */
+  /* border-bottom: 5px dotted #fff; */
   .content {
     @include outer-container;
     position: relative;
