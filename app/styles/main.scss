@@ -120,6 +120,9 @@ body {
       color: $dark-gray;
       margin: 50px;
       position: relative;
+      @include media ($mobile) {
+        line-height: 1.1;
+      }
 
       &:after {
         content: '';
@@ -238,6 +241,11 @@ body {
       color: white;
       margin: 50px;
       position: relative;
+      @include media ($mobile) {
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 1.1;
+      }
 
       &:after {
         content: '';
@@ -252,7 +260,7 @@ body {
       }
     }
     .box-time {
-      @include span-columns(2);
+      @include span-columns(3);
       box-sizing:border-box;
       -moz-box-sizing:border-box;
       -webkit-box-sizing:border-box;
@@ -269,7 +277,7 @@ body {
     }
 
     .box-time-label {
-      @include span-columns(2);
+      @include span-columns(3);
       color: white;
       font-size: 20px;
       text-align: center;
@@ -308,6 +316,10 @@ body {
       color: $dark-gray;
       margin: 0 50px 50px;
       position: relative;
+      @include media ($mobile) {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
       &:after {
         content: '';
@@ -410,6 +422,15 @@ body {
       margin: 0 50px 50px;
       position: relative;
       margin-bottom: 20vh;
+      @include media ($mobile) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10vh;
+        i {
+          display: block;
+          margin: 5px 0;
+        }
+      }
 
       &:after {
         content: '';
@@ -427,6 +448,9 @@ body {
     .icon {
       color: $dark-gray;
       font-size: 250px;
+      @include media ($mobile) {
+        font-size: 190px;
+      }
     }
 
     .question {
@@ -466,7 +490,7 @@ body {
       line-height: 1em;
       text-shadow: 2px 4px 0px rgba(31, 134, 142, 1);
       @include media($mobile) {
-        font-size: 50px;
+        font-size: 35px;
         line-height: 1em;
       }
 
