@@ -409,7 +409,7 @@ body {
     padding: 50px;
     margin-top: 0;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     @include media ($mobile) {
       padding-bottom: 50px;
     }
@@ -425,7 +425,6 @@ body {
       @include media ($mobile) {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 10vh;
         i {
           display: block;
           margin: 5px 0;
@@ -450,6 +449,9 @@ body {
       font-size: 250px;
       @include media ($mobile) {
         font-size: 190px;
+      }
+      &:before {
+        margin: 0;
       }
     }
 
@@ -476,7 +478,7 @@ body {
     margin-top: 0;
     text-align: center;
     @include media ($mobile) {
-      padding-bottom: 50px;
+      padding: 50px 0;
     }
 
     .title {
@@ -535,6 +537,8 @@ body {
       margin-bottom: 80px;
       @include media($mobile) {
         line-height: 1em;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       &:after {
@@ -601,6 +605,8 @@ body {
       position: relative;
       @include media($mobile) {
         line-height: 1em;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       &:after {
@@ -716,6 +722,8 @@ body {
       margin-bottom: 0px;
       @include media($mobile) {
         line-height: 1em;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       &:after {
