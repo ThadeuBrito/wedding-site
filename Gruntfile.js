@@ -63,7 +63,8 @@ module.exports = function (grunt) {
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+          '<%= yeoman.app %>/videos/{,*/}*.{mp4,webm,ogg}'
         ]
       }
     },
@@ -210,6 +211,7 @@ module.exports = function (grunt) {
             '<%= config.dist %>/styles/{,*/}*.css',
             '<%= config.dist %>/images/{,*/}*.*',
             '<%= config.dist %>/styles/fonts/{,*/}*.*',
+            '<%= yeoman.dist %>/videos/{,*/}*.{mp4,webm,ogg}',
             '<%= config.dist %>/*.{ico,png}'
           ]
         }
@@ -232,7 +234,7 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= config.dist %>',
           '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
+          '<%= config.dist %>/styles',
         ]
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
@@ -322,7 +324,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'videos/{,*/}*.{mp4,webm,ogg}'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
