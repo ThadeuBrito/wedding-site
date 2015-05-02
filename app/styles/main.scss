@@ -334,12 +334,26 @@ body {
       }
     }
 
-    .intro-event {
+    .intro-event, .save-the-date, .date, .icon-map, .text-format {
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
       color: #555555;
       margin-top: 80px;
       text-align: center;
+    }
+    .save-the-date {
+      margin-top: 20px;
+    }
+
+    .date {
+      margin-top: 20px;
+      font-size: 45px
+    }
+
+    .icon-map {
+      display: block;
+      margin-top: 20px;
+      font-size: 130px;
     }
 
     .time-line {
