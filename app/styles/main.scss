@@ -46,6 +46,15 @@ body {
   width: 100%;
 }
 
+.social-box {
+  position: fixed;
+  z-index: 999;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 5px;
+}
+
 .music-play {
   position: fixed;
   top: 10px;
