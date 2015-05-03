@@ -56,3 +56,20 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+var playing = true;
+$('.icon-pause').hide();
+
+$('.music-play').click(function() {
+  if (playing) {
+    $('#player').trigger('pause');
+    $('.icon-play').hide();
+    $('.icon-pause').show();
+    playing = false;
+  } else {
+    $('#player').trigger('play');
+    playing = true;
+    $('.icon-play').show();
+    $('.icon-pause').hide();
+  }
+});

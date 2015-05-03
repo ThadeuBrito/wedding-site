@@ -46,6 +46,25 @@ body {
   width: 100%;
 }
 
+.music-play {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 999;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.5;
+  i {
+    font-size: 21px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .welcome-section {
   background-color: #323232;
   background-position: center;
