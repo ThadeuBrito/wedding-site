@@ -739,11 +739,21 @@ body {
       color: $dark-gray;
       background-color: $cloud;
       border: 3px dotted $gray;
+      margin-bottom: 20px;
       .show-account {
       }
       .account {
       }
     }
+
+    .about-taxas {
+      font-family: "Montserrat", sans-serif;
+       font-size: 13px;
+       color: #555555;
+       line-height: 1.6;
+       margin-bottom: 15px;
+    }
+
   }
 }
 
