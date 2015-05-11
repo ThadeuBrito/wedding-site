@@ -14,7 +14,7 @@ $tablet: new-breakpoint(max-width 760px 8);
 body {
   background: #fafafa;
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  font-family: 'Libre Baskerville', serif !important;
+  font-family: $lato, sans-serif;
   color: #333;
   margin: 0;
   line-height: 24px;
@@ -234,10 +234,9 @@ body {
       @include span-columns(10);
       @include shift(1);
       text-align: center;
-      /* font-family: $lato; */
+      font-family: $lato;
       color: $dark-gray;
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 15px;
       @include media ($mobile) {
         margin-bottom: 50px;
       }
@@ -311,7 +310,7 @@ body {
       color: white;
       font-size: 20px;
       text-align: center;
-      /* font-family: $montserrat; */
+      font-family: $montserrat;
       padding: 10px 0px;
       @include media($mobile) {
         font-size: 10px;
@@ -365,7 +364,7 @@ body {
     }
 
     .intro-event, .save-the-date, .date, .icon-map, .text-format {
-      /* font-family: "Montserrat", sans-serif; */
+      font-family: "Montserrat", sans-serif;
       font-size: 20px;
       color: #555555;
       margin-top: 80px;
@@ -509,10 +508,8 @@ body {
 
     .question {
       color: $dark-gray;
-      /* font-family: $lato; */
+      font-family: $lato;
       line-height: 1em;
-      font-size: 24px;
-      margin-top: 100px;
     }
 
   }
@@ -628,10 +625,9 @@ body {
       }
       .description {
         text-align: left;
-        /* font-family: $lato; */
+        font-family: $lato;
         color: $dark-gray;
-        font-size: 13px;
-        line-height: 1.7;
+        font-size: 15px;
         margin: 0 10px 15px;
       }
     }
@@ -677,7 +673,7 @@ body {
       }
     }
     .introduction {
-      /* font-family: $montserrat; */
+      font-family: $montserrat;
       font-size: 20px;
       color: $dark-gray;
       margin-bottom: 60px;
@@ -745,19 +741,18 @@ body {
       background-color: $cloud;
       border: 3px dotted $gray;
       margin-bottom: 20px;
-      font-family: $montserrat;
       .show-account {
       }
       .account {
       }
-          }
+    }
 
     .about-taxas {
-      /* font-family: $montserrat; */
-      font-size: 13px;
-      color: #555555;
-      line-height: 1.6;
-      margin-bottom: 15px;
+      font-family: "Montserrat", sans-serif;
+       font-size: 13px;
+       color: #555555;
+       line-height: 1.6;
+       margin-bottom: 15px;
     }
 
   }
