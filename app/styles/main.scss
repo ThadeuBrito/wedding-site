@@ -45,6 +45,7 @@ body {
   background-size: contain;
   position: absolute;
   width: 100%;
+  z-index: 999;
 }
 
 .social-box {
@@ -79,6 +80,7 @@ body {
   background-color: #323232;
   background-position: center;
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   opacity: 0.9;
@@ -132,6 +134,9 @@ body {
 }
 
 .about-both {
+  position: relative;
+  width: 100%;
+  background-color: white;
 
   .content {
     @include outer-container;
@@ -147,7 +152,9 @@ body {
       font-family: $lato;
       text-transform: uppercase;
       color: $dark-gray;
-      margin: 50px;
+      font-size: 32px;
+      padding: 25px 0 0 0;
+      margin-bottom: 50px;
       position: relative;
       @include media ($mobile) {
         line-height: 1.1;
@@ -247,13 +254,10 @@ body {
 }
 
 .count-down {
-
-  /* background: url("/images/bg-count-down.jpg") no-repeat fixed; */
   background: url("/images/welcome-bg.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
-  /* border-top: 5px dotted #fff; */
-  /* border-bottom: 5px dotted #fff; */
+  position: relative;
   .content {
     @include outer-container;
     position: relative;
@@ -325,7 +329,7 @@ body {
 }
 
 .about-event {
-
+  position: relative;
   background-color: white;
   border-bottom: 1px solid $cloud;
   .content {
@@ -451,7 +455,7 @@ body {
 }
 
 .where-we-go {
-
+  position: relative;
   background-color: white;
   .content {
     @include outer-container;
@@ -517,7 +521,7 @@ body {
 
 
 .to-cancun {
-
+  position: relative;
   background: url("/images/bg-cancun-1.jpg") no-repeat fixed;
   background-size: cover;
   background-position: center;
@@ -564,7 +568,7 @@ body {
 
 
 .want-to-do {
-
+  position: relative;
   background-color: white;
   .content {
     @include outer-container;
@@ -636,6 +640,7 @@ body {
 }
 
 .donations {
+  position: relative;
   background-color: white;
   .content {
     @include outer-container;
@@ -759,7 +764,7 @@ body {
 }
 
 .where {
-
+  position: relative;
   background-color: white;
   .content {
     @include outer-container;
